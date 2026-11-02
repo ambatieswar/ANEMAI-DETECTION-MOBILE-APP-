@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">HemoScan Edge architecture and safety gates</title>
+  <desc id="desc">A workflow from image capture through quality checks, a disabled eye detector and model manifest gate, local history, and a safety disclaimer.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <style>
+      .box { fill: #f8fafc; stroke: #334155; stroke-width: 2; rx: 14; }
+      .gate { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 14; }
+      .safe { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 14; }
+      .title { font: 700 22px Arial, sans-serif; fill: #0f172a; }
+      .label { font: 600 17px Arial, sans-serif; fill: #0f172a; }
+      .note { font: 14px Arial, sans-serif; fill: #334155; }
+      .arrow { stroke: #334155; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .dashed { stroke-dasharray: 8 7; }
+    </style>
+  </defs>
+  <rect width="1200" height="620" fill="#ffffff"/>
+  <text x="60" y="52" class="title">HemoScan Edge: implemented workflow and safety boundary</text>
+  <text x="60" y="82" class="note">Prototype architecture; the shipped model and eye detector remain blocked until independent validation gates pass.</text>
+
+  <rect x="60" y="140" width="190" height="100" class="box"/>
+  <text x="155" y="178" text-anchor="middle" class="label">Capture or</text>
+  <text x="155" y="202" text-anchor="middle" class="label">import image</text>
+  <text x="155" y="225" text-anchor="middle" class="note">Flutter camera/gallery</text>
+
+  <rect x="310" y="140" width="210" height="100" class="box"/>
+  <text x="415" y="178" text-anchor="middle" class="label">Quality checks</text>
+  <text x="415" y="202" text-anchor="middle" class="note">blur, brightness,</text>
+  <text x="415" y="223" text-anchor="middle" class="note">framing and image validity</text>
+
+  <rect x="580" y="120" width="230" height="140" class="gate"/>
+  <text x="695" y="160" text-anchor="middle" class="label">Model package gate</text>
+  <text x="695" y="187" text-anchor="middle" class="note">manifest enabled?</text>
+  <text x="695" y="209" text-anchor="middle" class="note">hash and tensor contract?</text>
+  <text x="695" y="238" text-anchor="middle" class="note">eye detector available?</text>
+
+  <rect x="870" y="140" width="270" height="100" class="safe"/>
+  <text x="1005" y="178" text-anchor="middle" class="label">Screening result path</text>
+  <text x="1005" y="202" text-anchor="middle" class="note">only after governed models</text>
+  <text x="1005" y="223" text-anchor="middle" class="note">are independently validated</text>
+
+  <path d="M250 190 H310" class="arrow"/>
+  <path d="M520 190 H580" class="arrow"/>
+  <path d="M810 190 H870" class="arrow dashed"/>
+
+  <rect x="310" y="355" width="230" height="105" class="safe"/>
+  <text x="425" y="394" text-anchor="middle" class="label">Encrypted local</text>
+  <text x="425" y="418" text-anchor="middle" class="label">history</text>
+  <text x="425" y="442" text-anchor="middle" class="note">minimal report data</text>
+
+  <rect x="610" y="355" width="230" height="105" class="safe"/>
+  <text x="725" y="394" text-anchor="middle" class="label">PDF report</text>
+  <text x="725" y="418" text-anchor="middle" class="label">and export</text>
+  <text x="725" y="442" text-anchor="middle" class="note">includes disclaimer</text>
+
+  <rect x="910" y="335" width="230" height="145" class="gate"/>
+  <text x="1025" y="374" text-anchor="middle" class="label">Current fail-closed</text>
+  <text x="1025" y="399" text-anchor="middle" class="note">eye detector manifest:</text>
+  <text x="1025" y="422" text-anchor="middle" class="label">enabled = false</text>
+  <text x="1025" y="451" text-anchor="middle" class="note">no clinical diagnosis</text>
+
+  <path d="M1005 240 V300 H425 V355" class="arrow"/>
+  <path d="M1005 240 V300 H725 V355" class="arrow"/>
+  <path d="M810 220 V300 H1025 V335" class="arrow"/>
+
+  <text x="60" y="550" class="note">Dashed path: future governed inference path. Orange boxes: explicit safety/release gates.</text>
+  <text x="60" y="577" class="note">This diagram contains no patient imagery, clinical data, performance claims, or invented screenshots.</text>
+</svg>
