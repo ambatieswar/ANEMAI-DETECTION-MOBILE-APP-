@@ -1,0 +1,44 @@
+name: anemia_app
+description: Edge AI Powered Non-Invasive Anemia Screening App.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  tflite_flutter: ^0.12.1
+
+  cupertino_icons: ^1.0.8
+
+  camera: ^0.11.0+2
+  image: ^4.12.0
+  image_picker: ^1.2.4
+  path_provider: ^2.1.6
+  google_mlkit_face_detection: ^0.15.1
+  flutter_riverpod: ^2.6.1
+  flutter_secure_storage: ^9.2.4
+  cryptography: ^2.7.0
+  pdf: ^3.11.3
+  printing: ^5.14.2
+  path: ^1.9.1
+  crypto: ^3.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/anemia_model.tflite
+    - assets/model_manifest.json
+    - assets/eye_detector_manifest.json

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "model_id": "anemia_screening_pending_validation",
+  "enabled": false,
+  "status": "blocked",
+  "model_sha256": "648d7f046a88e57719a9ab40e49f3df204dad9e6b702113152ebc07e96334699",
+  "reason": "The bundled prototype model has not been validated on an approved, patient-level-split clinical dataset.",
+  "input": {
+    "width": 224,
+    "height": 224,
+    "channels": 3,
+    "normalization": "0_to_1",
+    "dtype": "float32"
+  },
+  "output": {
+    "type": "binary_probability",
+    "positive_class": "screening_increased_risk",
+    "calibrated": false
+  },
+  "required_gates": [
+    "validated_eye_detector",
+    "quality_gate",
+    "out_of_distribution_gate",
+    "external_test_set",
+    "calibration_report",
+    "model_hash_review"
+  ]
+}

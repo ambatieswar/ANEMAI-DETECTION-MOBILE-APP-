@@ -1,0 +1,41 @@
+# Local and generated files
+.DS_Store
+*.log
+*.tmp
+*.pyc
+__pycache__/
+.venv/
+venv/
+
+# Flutter/Dart generated state and build output
+anemia_app/.dart_tool/
+anemia_app/.flutter-plugins
+anemia_app/.flutter-plugins-dependencies
+anemia_app/.idea/
+anemia_app/build/
+anemia_app/coverage/
+anemia_app/**/Flutter/ephemeral/
+anemia_app/**/Pods/
+anemia_app/*.iml
+anemia_app/build.txt
+anemia_app/build_log.txt
+anemia_app/flutter_build_error.txt
+anemia_app/android/gradle_error.txt
+anemia_app/android/local.properties
+
+# Local datasets and path-bearing metadata must not be published.
+anemia_model/dataset/
+anemia_model/test_images/
+anemia_model/image_locations.txt
+
+# Trained artifacts are generated outputs. The disabled app artifact is kept
+# explicitly by the app asset path and remains subject to manual review.
+anemia_model/models/*.keras
+anemia_model/models/*.h5
+anemia_model/models/*.tflite
+anemia_model/models/*/
+
+# Secrets and signing material
+**/*.jks
+**/*.keystore
+**/key.properties

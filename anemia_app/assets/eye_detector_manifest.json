@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "model_id": "eye_detector_pending_validation",
+  "enabled": false,
+  "status": "blocked",
+  "reason": "A real, labeled eye/lower-eyelid detector has not yet been trained and independently validated.",
+  "input": {
+    "width": 224,
+    "height": 224,
+    "channels": 3,
+    "normalization": "0_to_1",
+    "dtype": "float32"
+  },
+  "output": {
+    "type": "binary_probability",
+    "positive_class": "eye_or_lower_eyelid"
+  }
+}
