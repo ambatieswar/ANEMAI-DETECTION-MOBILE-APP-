@@ -70,5 +70,6 @@ using clinical data.
 ## Publication boundary
 
 This folder is the authoritative source selected from the surrounding
-`Innovation` copies. The repository is prepared locally only; no GitHub
-repository is created, made public, pushed, or published by this work.
+`Innovation` copies. The existing public GitHub repository was updated only
+after explicit approval; no new repository was created and no visibility
+change was made.
